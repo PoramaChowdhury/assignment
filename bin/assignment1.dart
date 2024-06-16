@@ -34,11 +34,11 @@ class Car {
     return year;
   }
 
-  int age() {
+  void age() {
 
     int currentYear = DateTime.now() .year;
     int Age = currentYear - year;
-    return Age;
+    print('Age- $Age');
   }
 
 }
@@ -58,20 +58,20 @@ void main(){
   print('model name- ${obj.getModel()}');
   print('year- ${obj.getYear()}');
   print('brand name- ${obj.getMilesDriven()}');
-  print('Age- ${obj.age()}');
+  obj.age();
 
 
   print('brand name- ${obj1.getBrand()}');
   print('model name- ${obj1.getModel()}');
   print('year- ${obj1.getYear()}');
   print('brand name- ${obj1.getMilesDriven()}');
-  print('Age- ${obj1.age()}');
+  obj1.age();
 
   print('brand name- ${obj2.getBrand()}');
   print('model name- ${obj2.getModel()}');
   print('year- ${obj2.getYear()}');
   print('brand name- ${obj2.getMilesDriven()}');
-  print('Age- ${obj2.age()}');
+  obj2.age();
 
 
 
