@@ -2,20 +2,17 @@ class Car {
   late String brand;
   late String model;
   late int year;
-  late double milesDriven ;
+  late double milesDriven;
 
   static int numberOfCars = 0;
 
-  Car(this.brand,
-      this.model,
-      this.year){
-    this. milesDriven = 0.0;
+  Car(this.brand, this.model, this.year) {
+    this.milesDriven = 0.0;
     numberOfCars++;
   }
 
   void drive(double miles) {
-
-    milesDriven  += miles;
+    milesDriven += miles;
   }
 
   double getMilesDriven() {
@@ -25,7 +22,6 @@ class Car {
   String getBrand() {
     return brand;
   }
-
   String getModel() {
     return model;
   }
@@ -34,21 +30,17 @@ class Car {
     return year;
   }
 
-  void age() {
-
-    int currentYear = DateTime.now() .year;
+  void getAge() {
+    int currentYear = DateTime.now().year;
     int Age = currentYear - year;
     print('Age- $Age');
   }
-
 }
 
-
-
-void main(){
-  Car obj = Car('Toyota','T',1995);
-  Car obj1 = Car('Audi','A',1996);
-  Car obj2 = Car('Jaguar','J',1997);
+void main() {
+  Car obj = Car('Toyota', 'T', 1995);
+  Car obj1 = Car('Audi', 'A', 1996);
+  Car obj2 = Car('Jaguar', 'J', 1997);
 
   obj.drive(120.30);
   obj1.drive(121.30);
@@ -58,43 +50,19 @@ void main(){
   print('model name- ${obj.getModel()}');
   print('year- ${obj.getYear()}');
   print('brand name- ${obj.getMilesDriven()}');
-  obj.age();
-
+  obj.getAge();
 
   print('brand name- ${obj1.getBrand()}');
   print('model name- ${obj1.getModel()}');
   print('year- ${obj1.getYear()}');
   print('brand name- ${obj1.getMilesDriven()}');
-  obj1.age();
+  obj1.getAge();
 
   print('brand name- ${obj2.getBrand()}');
   print('model name- ${obj2.getModel()}');
   print('year- ${obj2.getYear()}');
   print('brand name- ${obj2.getMilesDriven()}');
-  obj2.age();
+  obj2.getAge();
 
-
-
- print('Total number of car: ${Car.numberOfCars}');
-
-
-
+  print('Total number of car: ${Car.numberOfCars}');
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
